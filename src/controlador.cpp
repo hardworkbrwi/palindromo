@@ -1,5 +1,9 @@
 #include "controlador.h"
 
+using std::string;
+using std::cout;
+using std::endl;
+
 Controlador::Controlador( string texto){
     this->texto = texto;
     texto_aux = compactaCaracteres( texto );

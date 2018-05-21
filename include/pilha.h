@@ -2,7 +2,6 @@
 #define PILHA_H
 
 #include <iostream>
-#include "lista.h"
 //#include <memory>
 
 /* Para permitir sobrecarregar o operador de insercao
@@ -34,7 +33,7 @@ class Pilha{
         int desempilhar();
         int getTamanho();
 
-        friend std::ostream& operator<< <T>(std::ostream& o, Pilha<T> const &p);
+        //friend std::ostream& operator<< <T>(std::ostream& o, Pilha<T> const &p);
 };
 
 template <typename T>
@@ -90,19 +89,5 @@ template <typename T>
 int Pilha<T>::getTamanho(){
     return tamanho;
 }
-
-/* template <typename T>
-std::ostream& operator<< ( std::ostream& o, Pilha<T> const &p) {
-	//auto atual = l.cabeca;
-    std::string p_copia;
-    int cont = p.getTamanho();
-	while (cont <= 0) {
-        o << p.desempilhar;
-		//atual = atual->getNext();
-        cont--;
-	} 
-
-	return o;
-} */
 
 #endif
