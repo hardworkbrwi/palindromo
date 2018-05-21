@@ -2,6 +2,7 @@
 *.d
 
 # Compiled Object files
+build/*
 *.slo
 *.lo
 *.o
@@ -17,6 +18,7 @@
 *.dll
 
 # Fortran module files
+doc/*
 *.mod
 *.smod
 
@@ -27,6 +29,9 @@
 *.lib
 
 # Executables
+bin/*
 *.exe
 *.out
 *.app
+
+palindromo
