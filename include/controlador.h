@@ -26,26 +26,30 @@ class Controlador{
         /**
         * @brief Método que trata a string capturada da entrada padrão
         * @detail Deixa a string minúsculas
-        * @param T - valor do nó
+        * @param string - valor do texto a ser analisado
         */
         std::string compactaCaracteres( std::string );
 
         /**
-        * @brief Método construtor padrão de Node
+        * @brief Método para popular container - pilha
         */      
         void empilhar();
 
     public:
         /**
-        * @brief Método construtor parametrizado de Node
-        * @param T - valor do nó
+        * @brief Método construtor parametrizado de Controlador
+        * @param string - Valor do texto para analise
         */  
         Controlador( std::string );
  
         /**
-        * @brief Método destrutor de Node
+        * @brief Método destrutor de Controlador
         */
         ~Controlador();
+
+        /**
+        * @brief Método para analisar se o texto é palíndromo
+        */
         void isPalindromo();
 };
 

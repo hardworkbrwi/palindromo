@@ -1,3 +1,11 @@
+/**
+ * @file	pilha.h
+ * @brief	Implementação da classe Pilha em C++
+ * @author	Bruno César L. Silva
+ * @since	19/05/2018
+ * @date	26/05/2018
+ */
+
 #ifndef PILHA_H
 #define PILHA_H
 
@@ -24,13 +32,54 @@ class Pilha{
         int capacidade; /**< Quantidade máxima de elementos */
 
     public:
+
+        /**
+        * @brief Método construtor parametrizado de Pilha
+        * @param int - Recebe o valor da capacidade máxima do vetor.
+        * Quando vazio, inicializa com 50 espaços
+        */  
         Pilha( int capacidade = 50 );
+
+        /**
+        * @brief Método destrutor de Pilha
+        */
         ~Pilha();
+
+        /**
+        * @brief Verifica se pilha está vazia
+        * @return Retorna verdadeiro ou falso
+        */
         bool vazia();
+
+        /**
+        * @brief Verifica se pilha está cheia
+        * @return Retorna verdadeiro ou falso
+        */
         bool cheia();
+
+        /**
+        * @brief Verifica o valor do topo a pilha
+        * @return Retorna o valor do topo da pilha
+        */
         T& topo();
+
+        /**
+        * @brief Empilha valores na pilha
+        * @param T - Recebe um novo valor do tipo T para ser empilhado
+        * @return Se houve sucesso no armazenamento do valor, retorna 1; se não, retorna 0
+        */
         int empilhar( T novo );
+
+        /**
+        * @brief Desempilha os valores da pilha
+        * @return Retorna 1 para sucesso ou 0 para falha
+        */
         int desempilhar();
+
+        /**
+        * @brief Verifica a quantidade de dados da pilha
+        * @return Retorna um inteiro relativo ao tamanho da pilha
+        */
         int getTamanho();
 
         //friend std::ostream& operator<< <T>(std::ostream& o, Pilha<T> const &p);
