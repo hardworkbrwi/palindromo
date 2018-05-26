@@ -13,7 +13,7 @@
 #include "pilha.h"
 
 /**
-* @brief Implementacao da classe Controlador
+* @brief Implementacao da classe Controlador.
 * @detail Opera sobre a pilha para identificar possíveis palíndromos
 */
 class Controlador{
