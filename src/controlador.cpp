@@ -8,6 +8,7 @@ Controlador::Controlador( string texto){
     this->texto = texto;
     texto_aux = compactaCaracteres( texto );
     palindromo = true;
+    //cout << texto_aux;
 
     empilhar();
 }
@@ -34,10 +35,10 @@ void Controlador::isPalindromo(){
     //Comparando caracteres
     int cont = 0;
     int metade = (int)(texto_aux.size()/2);
-    while( cont < pilha1.getTamanho() ){
-        
+    
+    while( cont < metade ){
         if( texto_aux.size()%2 == 0){
-            if( texto_aux[metade-cont-1] != pilha1.topo() ){
+            if( texto_aux[metade+cont] != pilha1.topo() ){
                 palindromo = false;
                 break;
             }
@@ -62,7 +63,7 @@ void Controlador::empilhar(){
     int metade = (int)(texto_aux.size()/2);
     
     while( cont < metade ){
-        pilha1.empilhar(texto_aux[cont]);;
+        pilha1.empilhar(texto_aux[cont]);
         cont++;
     }
 }
